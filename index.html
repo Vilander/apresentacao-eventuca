@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvenTuca - Apresentação do Projeto</title>
+  <style>
+    :root {
+      --bg-dark: #121214;
+      --card-bg: #202024;
+      --card-border: #323238;
+      --orange-500: #f97316;
+      --orange-600: #ea580c;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--orange-500);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--orange-500);
+      transform: translateY(-2px);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--orange-500);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+      border: none;
+      width: fit-content;
+    }
+
+    .btn:hover {
+      background-color: var(--orange-600);
+    }
+
+    .btn-secondary {
+      background-color: #29292e;
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background-color: #323238;
+    }
+
+    /* Card 2: Diagrama UML Viewer */
+    .viewer-container {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 480px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .viewer-container .mxgraph {
+      max-width: 100%;
+      height: 100%;
+    }
+
+    .uml-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      margin-top: 50px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EvenTuca <img src="logo.png" alt="logo" height="50"></h1>
+    <p>Tecnologia Unindo Comunidades e Admiradores</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Card 1: Repositório GitHub -->
+    <section class="card">
+      <div>
+        <h2> Código-Fonte</h2>
+        <p>Acesse o repositório com o código fonte completo do app</p>
+      </div>
+      <!-- Atualize o link abaixo com a URL exata do seu repositório -->
+      <a href="https://github.com/Vilander/eventuca" target="_blank" rel="noopener noreferrer" class="btn">
+        Ver Repositório no GitHub →
+      </a>
+    </section>
+
+    <!-- Card 2: Diagrama UML (SVG) -->
+  <section class="card">
+    <div>
+      <h2> Modelagem UML (Casos de Uso)</h2>
+      <p>Diagrama detalhando a interação entre Visitantes, Usuários Cadastrados e o Banco de Dados (Turso).</p>
+      
+      <!-- Contêiner com rolagem caso o diagrama seja largo -->
+      <div class="svg-container">
+        <img src="Eventuca.webp" alt="Diagrama de Casos de Uso EvenTuca" class="svg-diagram">
+      </div>
+
+      <div class="uml-actions">
+        <a href="Eventuca.drawio.svg" download="Eventuca.drawio.svg" class="btn btn-secondary">
+          Baixar Imagem SVG ↓
+        </a>
+        <a href="Eventuca.webp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          Abrir em Nova Aba ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Card 3: Download do APK -->
+    <section class="card">
+      <div>
+        <h2> Aplicativo Android (Release)</h2>
+        <p>Baixe o pacote de instalação APK para testar o aplicativo diretamente no seu smartphone Android.</p>
+      </div>
+      <!-- Insira o arquivo app-release.apk na mesma pasta deste HTML ou aponte o caminho -->
+      <a href="app-release.apk" download="EvenTuca.apk" class="btn">
+        Baixar EvenTuca APK ↓
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>EvenTuca • Construído com React Native, Expo e Turso</p>
+  </footer>
+
+  <!-- Script oficial do visualizador do diagrams.net / draw.io -->
+  <!-- <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script> -->
+
+  <!-- <script>
+    // Permite fazer download direto do arquivo .drawio
+    const drawioXml = ``;
+
+    document.getElementById('btnBaixarXml').addEventListener('click', () => {
+      const blob = new Blob([drawioXml], { type: 'application/xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'diagrama-eventuca.drawio';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  </script> -->
+</body>
+</html>
