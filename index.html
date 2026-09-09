@@ -110,7 +110,7 @@
     }
 
     .btn-secondary {
-      background-color: #29292e;
+      background-color: var(--orange-500);
       border: 1px solid var(--card-border);
       color: var(--text-main);
     }
@@ -171,36 +171,49 @@
       </a>
     </section>
 
-    <!-- Card 2: Diagrama UML (SVG) -->
+        <!-- Card 2: Figma -->
+    <section class="card">
+      <div>
+        <h2> Protótipo</h2>
+        <p>Acesse o protótipo no Figma</p>
+      </div>
+      <!-- Atualize o link abaixo com a URL exata do seu repositório -->
+      <a href="https://www.figma.com/design/6lG9aFxov8m3eHu0TFWksJ/PI-Mobile?node-id=0-1&t=rZ558v8sCgSBgFWy-1" target="_blank" rel="noopener noreferrer" class="btn">
+        Ver Figma →
+      </a>
+    </section>
+
+    
+    <!-- Card 3: Diagrama UML (SVG) -->
   <section class="card">
     <div>
       <h2> Modelagem UML (Casos de Uso)</h2>
       <p>Diagrama detalhando a interação entre Visitantes, Usuários Cadastrados e o Banco de Dados (Turso).</p>
       
       <!-- Contêiner com rolagem caso o diagrama seja largo -->
-      <div class="svg-container">
-        <img src="Eventuca.webp" alt="Diagrama de Casos de Uso EvenTuca" class="svg-diagram">
+      <div class="img-container">
+        <img src="Eventuca.webp" alt="Diagrama de Casos de Uso EvenTuca" class="diagram">
       </div>
-
+      </br>
       <div class="uml-actions">
-        <a href="Eventuca.drawio.svg" download="Eventuca.drawio.svg" class="btn btn-secondary">
+        <a href="Eventuca.drawio.svg" download="Eventuca.drawio.svg" class="btn">
           Baixar Imagem SVG ↓
         </a>
-        <a href="Eventuca.webp" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <a href="Eventuca.webp" target="_blank" rel="noopener noreferrer" class="btn">
           Abrir em Nova Aba ↗
         </a>
       </div>
     </div>
   </section>
 
-    <!-- Card 3: Download do APK -->
+    <!-- Card 4: Download do APK -->
     <section class="card">
       <div>
         <h2> Aplicativo Android (Release)</h2>
-        <p>Baixe o pacote de instalação APK para testar o aplicativo diretamente no seu smartphone Android.</p>
+        <p>Baixe o pacote de instalação APK para testar o aplicativo diretamente no seu smartphone (apenas Android).</p>
       </div>
       <!-- Insira o arquivo app-release.apk na mesma pasta deste HTML ou aponte o caminho -->
-      <a href="app-release.apk" download="EvenTuca.apk" class="btn">
+      <a href="app-release.zip" download="app-release.zip" class="btn">
         Baixar EvenTuca APK ↓
       </a>
     </section>
@@ -211,24 +224,5 @@
     <p>EvenTuca • Construído com React Native, Expo e Turso</p>
   </footer>
 
-  <!-- Script oficial do visualizador do diagrams.net / draw.io -->
-  <!-- <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script> -->
-
-  <!-- <script>
-    // Permite fazer download direto do arquivo .drawio
-    const drawioXml = ``;
-
-    document.getElementById('btnBaixarXml').addEventListener('click', () => {
-      const blob = new Blob([drawioXml], { type: 'application/xml' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'diagrama-eventuca.drawio';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    });
-  </script> -->
 </body>
 </html>
